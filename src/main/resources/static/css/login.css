@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  margin: 0;
+  background-color: #f8f8f8;
+}
+.header {
+  text-align: start;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 300px;
+  padding: 0 10px;
+  margin-bottom: 60px;
+}
+.header h1 {
+  font-size: 3em;
+  margin: 0;
+  color: #000;
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+}
+.login-container {
+  width: 100%;
+  max-width: 375px; /* iPhone 12 Pro의 화면 너비 */
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form label {
+  width: 90%;
+  margin-bottom: 8px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.login-form input {
+  width: 205px; /*calc(100% - 32px);*/
+  height: 36px;
+  /*padding: 8px 16px;*/
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.login-container button {
+  width: 137px;
+  height: 52px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #007bff;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
