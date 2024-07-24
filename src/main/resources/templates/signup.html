@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+            rel="stylesheet"
+    />
+    <link th:href = "@{/css/signup.css}" rel="stylesheet"  />
+    <title>회원가입</title>
+</head>
+<body>
+<div class="header">
+    <h1>회원가입</h1>
+</div>
+<div class="login-container">
+    <form class="login-form" action="" method="post">
+        <label for="name">이름</label>
+        <input type="text" id="name" placeholder="이름" />
+
+        <label for="tel">전화번호</label>
+        <input type="tel" id="tel" placeholder="전화번호" />
+
+        <label for="password">비밀번호</label>
+        <input
+                type="password"
+                id="password"
+                placeholder="비밀번호"
+                style="margin-bottom: 0px"
+        />
+        <button type="submit">가입하기</button>
+    </form>
+</div>
+</body>
+</html>
