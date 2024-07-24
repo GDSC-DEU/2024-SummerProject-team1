@@ -3,6 +3,7 @@ package team1.team1;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 
@@ -32,21 +33,30 @@ public class MainController {
         return "login";
     }
 
-    @GetMapping("/list/job")
-    @ResponseBody
+    @GetMapping("/worklist")
     public String jobListPage() {
-        /*
-        * 일자리 정보를 가져와서 객체로 만들기
-        * */
-        return "로그인";
+
+
+        return "worklist";
     }
+
+    @GetMapping("/workwrite")
+    public String jobWritePage() {
+        return "workwrite";
+    }
+
+    @PostMapping("/view")
+    public String jobViewPage(Model model) {
+        System.out.println();
+        return "";
+    }
+
     @GetMapping("/signup")
     @ResponseBody
     public String signupPage() {
 
         return "회원가입";
     }
-
 
     @GetMapping("/mypage_enrolled")
     public String myPageEnrolled(Model model) {
