@@ -24,7 +24,6 @@ class Content {
 public class MainController {
     @GetMapping("/")
     public String mainPage(Model model) {
-        model.addAttribute("hi", "반갑습니다");
         return "index";
     }
 
@@ -34,11 +33,22 @@ public class MainController {
         return "로그인";
     }
 
+    @GetMapping("/list/job")
+    @ResponseBody
+    public String jobListPage() {
+        /*
+        * 일자리 정보를 가져와서 객체로 만들기
+        * */
+        return "로그인";
+    }
     @GetMapping("/signup")
     @ResponseBody
     public String signupPage() {
+
         return "회원가입";
     }
+
+
     @GetMapping("/mypage_enrolled")
     public String myPageEnrolled(Model model) {
         Content[] contents = {
@@ -50,4 +60,5 @@ public class MainController {
         model.addAttribute("contents",contents);
         return "mypage_enrolled";
     }
+
 }
