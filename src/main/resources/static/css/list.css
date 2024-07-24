@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body {
+  font-family:'Noto Sans KR', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+  background-color: #f8f8f8;
+}
+
+.main-container {
+  max-width: 390px; /* 아이폰 12 Pro의 너비 */
+  width: 100%;
+  padding: 0 16px; /* 좌우 패딩 추가 */
+}
+
+.navbar {
+  background-color: #f8f9fa;
+  width: 100%;
+  /* 네비게이션 바의 배경색 */
+}
+
+.navbar-brand {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  /* 네비게이션 바 브랜드 텍스트 크기 */
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 52px;
+  width: 100%;
+  height: 69px;
+}
+
+.title-container h2 {
+  color: #000;
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.work-title a {
+  width: 64px;
+  height: 50px;
+  margin-bottom: 45px;
+  color: #9ADBFF;
+  text-align: center;
+  font-family: "Noto Sans KR";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.edu-title a {
+  width: 64px;
+  height: 50px;
+  margin-bottom: 45px;
+  color: #FF9EF0;
+  text-align: center;
+  font-family: "Noto Sans KR";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* 일자리 목록 컨테이너 박스 스타일 */
+.job-list-container,
+.edu-list-container {
+  margin-top: 61px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  /* 컨테이너 박스끼리의 간격 */
+}
+
+.job-list-container p, .edu-list-container p {
+  color: #000;
+  font-family: "Noto Sans KR";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.job-list-container small, .edu-list-container small {
+  color: #000;
+  font-family: "Noto Sans KR";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.justify-content-between h5 {
+  color: #000;
+  font-family: "Noto Sans KR";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+/* 일자리 항목 스타일 */
+.job-item,
+.edu-item {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  background: #9ADBFF;
+  border-radius: 15px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.edu-item {
+  border-radius: 10px;
+  background: #FF9EF0;
+}
+
+/* 모바일 버전 스타일 (iPhone 12 Pro, 390px 이하) */
+@media (max-width: 390px) {
+  .title-container {
+    margin-top: 20px;
+    font-size: 1.5rem;
+  }
+
+  .job-list-container,
+  .edu-list-container {
+    margin-top: 20px;
+    gap: 20px;
+    /* 모바일 화면에서는 간격을 줄입니다 */
+  }
+}

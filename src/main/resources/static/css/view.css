@@ -1,0 +1,159 @@
+/* 기본 스타일 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body {
+  font-family:'Noto Sans KR', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+  background-color: #f8f8f8;
+}
+
+.main-container {
+  width: 390px; /* 아이폰 12 Pro의 너비 */
+  max-width: 100%;
+  padding: 0 16px; /* 좌우 패딩 추가 */
+}
+
+.navbar {
+  background-color: #f8f9fa;
+  width: 100%;
+  /* 네비게이션 바의 배경색 */
+}
+
+.navbar-brand {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  /* 네비게이션 바 브랜드 텍스트 크기 */
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 52px;
+  width: 100%;
+  /* 너비를 100%로 설정하여 컨테이너 크기에 맞게 조정 */
+  height: 69px;
+}
+
+.title-container h2 {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* 뷰 목록 컨테이너 박스 스타일 */
+.view-list-container {
+  margin-top: 61px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  /* 컨테이너 박스끼리의 간격 */
+  width: 100%;
+}
+
+.view-list-container p {
+  color: #000;
+  font-family: "Noto Sans KR";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.view-list-container small {
+  color: #000;
+  font-family: "Noto Sans KR";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.justify-content-between h5 {
+  color: #000;
+  font-family: "Noto Sans KR";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+/* 뷰 항목 스타일 */
+.view-item {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 3px 3px 5px;
+  background: #9ADBFF;
+}
+
+/* 뷰 내용 박스 스타일 */
+.view-content {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 358px;
+  /* 좌우 마진을 고려한 너비 조정 */
+  max-height: 300px;
+  /* 최대 높이 설정 */
+  overflow-y: auto;
+  /* 콘텐츠가 최대 높이를 초과할 때 스크롤 활성화 */
+  box-sizing: border-box;
+  /* 패딩과 테두리를 포함한 크기 계산 */
+}
+
+.view-content textarea {
+  color: #000;
+  font-family: "Noto Sans KR";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* 버튼 스타일 */
+.view-list-container .btn {
+  background-color: #00A3FF;
+  color: #ffffff;
+}
+
+/* 모바일 버전 스타일 (iPhone 12 Pro, 390px 이하) */
+@media (max-width: 390px) {
+  .main-container {
+    width: calc(100% - 32px);
+    /* 좌우 마진을 고려한 너비 조정 */
+    padding: 0;
+  }
+
+  .page-title {
+    margin-top: 60px;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 1.5rem;
+    width: auto;
+    /* 화면에 맞게 너비 조절 */
+    height: auto;
+    /* 높이 조절 */
+  }
+
+  .view-list-container {
+    margin-top: 20px;
+    gap: 20px;
+    /* 모바일 화면에서는 간격을 줄입니다 */
+    width: 100%;
+  }
+
+  .view-content {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .view-content-text {
+    font-size: 1rem;
+  }
+}
