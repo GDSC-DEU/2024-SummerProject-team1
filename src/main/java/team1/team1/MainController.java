@@ -41,10 +41,9 @@ public class MainController {
         return "로그인";
     }
     @GetMapping("/signup")
-    @ResponseBody
     public String signupPage() {
 
-        return "회원가입";
+        return "signup";
     }
 
 
