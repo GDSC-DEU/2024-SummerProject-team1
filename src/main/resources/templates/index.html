@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link th:href = "@{/css/test.css}" rel="stylesheet"  />
+    <title>Busan Platform</title>
+</head>
+<body>
+<div class="header">
+    <h1>Busan</h1>
+    <p>노인 일자리, 교육 플랫폼</p>
+</div>
+<div class="buttons">
+    <div class="button login" onclick="output()">
+        <dotlottie-player
+                src="https://lottie.host/6b103594-83ab-4c9a-8b3a-d00ca610ffcb/kFLDi4Mdg8.json"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+        ></dotlottie-player>
+        로그인
+    </div>
+    <div class="button signup">
+        <dotlottie-player
+                src="https://lottie.host/ca6a050e-0a5b-4f2d-9fc2-a9dd9e70cf5a/OSOITPVAuX.json"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+        ></dotlottie-player>
+        회원가입
+    </div>
+    <div class="button work">
+        <dotlottie-player
+                src="https://lottie.host/02d7ed24-e08f-42b1-8d07-bb5ff1fb6556/ChrFLs5R9t.json"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+        ></dotlottie-player>
+        일
+    </div>
+    <div class="button education">
+        <dotlottie-player
+                src="https://lottie.host/83902af6-c4d3-436a-a9ec-42918ebe23d3/xnV4wVg5Hy.json"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+        ></dotlottie-player>
+        교육
+    </div>
+</div>
+<script
+        src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+        type="module"
+></script>
+<script>
+    function output() {
+      window.location.href = "test1.html";
+    }
+</script>
+</body>
+</html>
