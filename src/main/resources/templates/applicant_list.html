@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/applicant_list.css}">
+    <title>신청자 현황</title>
+</head>
+<body>
+    <h1>신청자 현황</h1>
+    </div>
+    <div class="content-wrapper">
+        <div class="content-container" th:classappend = "${content.type}">
+            <h2 class="content-header" th:text="${content.title}"></h2>
+            <p class="content-owner" th:text="${content.host}"></p>
+            <p class="content-end-date" th:text="${content.date}"></p>
+        </div>
+    </div>
+    <div class="list-wrapper">
+
+        <div class="member-info-container" th:each="applicant : ${applicants}">
+            <h2 class="member-name-text" th:text="${applicant.name}"></h2>
+            <p class="member-phone-number-text" th:text="${applicant.phoneNumber}"></p>
+        </div>
+    </div>
+
+</body>
+</html>
