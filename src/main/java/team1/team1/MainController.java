@@ -28,9 +28,8 @@ public class MainController {
     }
 
     @GetMapping("/login")
-    @ResponseBody
     public String loginPage() {
-        return "로그인";
+        return "login";
     }
 
     @GetMapping("/list/job")
