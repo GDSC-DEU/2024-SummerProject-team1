@@ -49,11 +49,14 @@ public class MainController {
         return "login";
     }
 
-    @GetMapping("/worklist")
-    public String jobListPage() {
-
-
+    @GetMapping("/work_list")
+    public String workListPage() {
         return "worklist";
+    }
+
+    @GetMapping("/edu_list")
+    public String eduListPage() {
+        return "edulist";
     }
 
     @GetMapping("/workwrite")
@@ -63,7 +66,6 @@ public class MainController {
 
     @PostMapping("/view")
     public String jobViewPage(Model model) {
-        System.out.println();
         return "";
     }
 
