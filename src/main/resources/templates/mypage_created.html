@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" program="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" th:href="@{/css/mypage.css}">
     <title>마이페이지</title>
 </head>
@@ -13,18 +13,18 @@
         <button class="tap-btn selected" onclick="location.href='./mypage_created'">생성한</button>
     </div>
     <div class="list-wrapper">
-            <div class="content-wrapper" th:each="content : ${contents}">
+            <div class="program-wrapper" th:each="program : ${programs}">
 
-                <div class="content-container"  th:classappend = "${content.type}">
-                    <h2 th:text="${content.title}" class="content-header"></h2>
-                    <p th:text="${content.host}" class="content-owner"></p>
-                    <p th:text="${content.date}" class="content-end-date"></p>
+                <div class="program-container"  th:classappend = "${program.type}">
+                    <h2 th:text="${program.title}" class="program-header"></h2>
+                    <p th:text="${program.host}" class="program-owner"></p>
+                    <p th:text="${program.date}" class="program-end-date"></p>
                 </div>
                 <button 
                     class="go-applicant-list-btn" 
-                    th:data-content-type="${content.type}" 
-                    th:data-content-id="${content.id}"
-                    th:onclick="|location.href = '/applicant_list/'+ this.getAttribute('data-content-type') + '/' + this.getAttribute('data-content-id')|"
+                    th:data-program-type="${program.type}"
+                    th:data-program-id="${program.id}"
+                    th:onclick="|location.href = '/applicant_list/'+ this.getAttribute('data-program-type') + '/' + this.getAttribute('data-program-id')|"
                     >
                         신청자 현황
                 </button>

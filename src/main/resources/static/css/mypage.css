@@ -68,28 +68,28 @@ h1 {
     cursor: pointer;
 }
 
-.content-wrapper {
+.program-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.content-container {
+.program-container {
     width: 294px;
     height: 148px;
     flex-shrink: 0;
     border-radius: 10px;
 }
-.content-container.job{
+.program-container.job{
     background: #9ADBFF;
 }
 
-.content-container.edu{
+.program-container.edu{
     background: #FF9EF0;
 }
-.content-container * {
+.program-container * {
     margin-inline: 20px;
 }
-.content-header {
+.program-header {
     margin-top: 10px;
     margin-bottom: 0px;
     font-size: 32px;
@@ -97,7 +97,7 @@ h1 {
     font-weight: 900;
     line-height: normal;
 }
-.content-owner {
+.program-owner {
     margin-top: 0px;
     margin-bottom: 0px;
     font-size:24px;
@@ -105,7 +105,7 @@ h1 {
     font-weight: 400;
     line-height: normal;
 }
-.content-end-date {
+.program-end-date {
     margin-top: 0px;
     margin-bottom: 8px;
     font-size:24px;
