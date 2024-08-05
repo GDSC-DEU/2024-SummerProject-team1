@@ -7,9 +7,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+
 @Controller
 public class MembersController {
+    @Autowired
     private MemberInfoRepository memberInfoRepository;
+
     @GetMapping("/login")
     public String loginPage(Model model) {
         model.addAttribute("loginRequest", new MemberInfo());
