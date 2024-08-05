@@ -20,18 +20,19 @@
     <h1>회원가입</h1>
 </div>
 <div class="login-container">
-    <form class="login-form" action="" method="post">
+    <form class="login-form" action="" method="post" th:object="${memberInfo}">
         <label for="name">이름</label>
-        <input type="text" id="name" placeholder="이름" />
+        <input type="text" id="name" th:field="*{name}" placeholder="이름" />
 
         <label for="tel">전화번호</label>
-        <input type="tel" id="tel" placeholder="전화번호" />
+        <input type="tel" id="tel" th:field="*{phoneNumber}" placeholder="전화번호" />
 
         <label for="password">비밀번호</label>
         <input
                 type="password"
                 id="password"
                 placeholder="비밀번호"
+                th:field="*{password}"
                 style="margin-bottom: 0px"
         />
         <button type="submit">가입하기</button>
