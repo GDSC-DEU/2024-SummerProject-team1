@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -22,11 +23,6 @@ public class MainController {
     @GetMapping("/")
     public String mainPage(Model model) {
         return "index";
-    }
-
-    @GetMapping("/login")
-    public String loginPage() {
-        return "login";
     }
 
     @GetMapping("/work_list")
@@ -49,11 +45,6 @@ public class MainController {
         return "";
     }
 
-    @GetMapping("/signup")
-    public String signupPage() {
-
-        return "signup";
-    }
 
     @GetMapping("/mypage_enrolled")
     public String myPageEnrolled(Model model) {
