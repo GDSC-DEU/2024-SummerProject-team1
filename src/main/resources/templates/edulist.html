@@ -15,7 +15,7 @@
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-md d-flex justify-content-between align-items-center">
-            <a class="navbar-brand" href="/test/html/worklist.html">GDSC-DEU-1Team</a>
+            <a class="navbar-brand" th:href="@{/}">Busan 노인 일자리·교육</a>
             <div class="d-flex">
                 <button type="button" class="btn btn-outline-info">마이페이지</button>
             </div>
@@ -25,26 +25,15 @@
     <div id="eduList" class="content">
         <div class="title-container edu-title">
             <h2 class="page-title">교육 목록</h2>
-            <a href="/test/html/workwrite.html" type="button">+</a>
+            <a th:href="@{/eduwrite}" type="button">+</a>
         </div>
-        <div class="edu-list-container">
+        <div th:each="edu : ${edus}" class="edu-list-container">
             <!-- 교육 목록 항목들 -->
             <div class="edu-item animate__animated animate__backInLeft">
-                <a href="/test/html/view.html" class="list-group-item list-group-item-action active" aria-current="true">
-                    <div class="justify-content-between">
-                        <h5 class="mb-1">영어회화 첫걸음</h5>
-                    </div>
-                    <p class="mb-1">동의대학교</p>
-                    <small>2024년 7월 20일까지</small>
-                </a>
-            </div>
-            <div class="edu-item animate__animated animate__backInLeft">
-                <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-                    <div class="justify-content-between">
-                        <h5 class="mb-1">하모니카 배우기</h5>
-                    </div>
-                    <p class="mb-1">부산노인종합복지관</p>
-                    <small>2024년 8월 20일까지</small>
+                <a th:href="@{/view(id=${edu.id})}" class="list-group-item list-group-item-action active" aria-current="true">
+                    <p class="program-title" th:text="${edu.title}"></p>
+                    <p class="program-host" th:text="${edu.host}"></p>
+                    <p class="program-end-date" th:text="${edu.endDate + '까지'}"></p>
                 </a>
             </div>
             <!-- 추가적인 교육 항목들 -->

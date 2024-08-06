@@ -87,9 +87,7 @@ body {
 .job-list-container p, .edu-list-container p {
   color: #000;
   font-family: "Noto Sans KR";
-  font-size: 25px;
   font-style: normal;
-  font-weight: 400;
 }
 
 .job-list-container small, .edu-list-container small {
@@ -137,4 +135,28 @@ body {
     gap: 20px;
     /* 모바일 화면에서는 간격을 줄입니다 */
   }
+}
+.program-title {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+.program-host {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size:24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.program-end-date {
+    margin-top: 0px;
+    margin-bottom: 8px;
+    font-size:24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }

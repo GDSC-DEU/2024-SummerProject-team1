@@ -15,7 +15,7 @@
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-md d-flex justify-content-between align-items-center">
-        <a class="navbar-brand" th:href="@{/index}">GDSC-DEU-1Team</a>
+        <a class="navbar-brand" th:href="@{/}">Busan 노인 일자리·교육</a>
         <div class="d-flex">
             <button type="button" class="btn btn-outline-info">마이페이지</button>
         </div>
@@ -25,15 +25,15 @@
     <div id="jobList" class="content">
         <div class="title-container work-title">
             <h2 class="page-title">일자리 목록</h2>
-            <a th:href="@{/workwrite}" class="btn btn-outline-info">+</a>
+            <a th:href="@{/workwrite}">+</a>
         </div>
         <div th:each="job : ${jobs}" class="job-list-container">
             <!-- 일자리 목록 항목들 -->
             <div class="job-item animate__animated animate__backInLeft">
                 <a th:href="@{/view(id=${job.id})}" class="list-group-item list-group-item-action active" aria-current="true">
-                    <h5 class="mb-1" th:text="${job.title}">앱 UI 테스터 모집</h5>
-                    <p class="mb-1" th:text="${job.host}">BNK 금융그룹</p>
-                    <small th:text="${job.endDate}">2024년 7월 20일까지</small>
+                    <p class="program-title" th:text="${job.title}"></p>
+                    <p class="program-host" th:text="${job.host}"></p>
+                    <p class="program-end-date" th:text="${job.endDate}"></p>
                 </a>
             </div>
             <!-- 추가적인 일자리 항목들 -->
