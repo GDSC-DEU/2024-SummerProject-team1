@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-class MemberInfo {
+public class MemberInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int id;
@@ -29,5 +29,69 @@ class MemberInfo {
     }
 
     public MemberInfo(){
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public List<Integer> getEnrolledEdus() {
+        return enrolledEdus;
+    }
+
+    public void setEnrolledEdus(List<Integer> enrolledEdus) {
+        this.enrolledEdus = enrolledEdus;
+    }
+
+    public List<Integer> getEnrolledJobs() {
+        return enrolledJobs;
+    }
+
+    public void setEnrolledJobs(List<Integer> enrolledJobs) {
+        this.enrolledJobs = enrolledJobs;
+    }
+
+    public List<Integer> getCreatedEdus() {
+        return createdEdus;
+    }
+
+    public void setCreatedEdus(List<Integer> createdEdus) {
+        this.createdEdus = createdEdus;
+    }
+
+    public List<Integer> getCreatedJobs() {
+        return createdJobs;
+    }
+
+    public void setCreatedJobs(List<Integer> createdJobs) {
+        this.createdJobs = createdJobs;
     }
 }

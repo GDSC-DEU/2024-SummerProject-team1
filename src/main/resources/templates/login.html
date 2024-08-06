@@ -10,25 +10,32 @@
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
             rel="stylesheet"
     />
-    <link th:href = "@{/css/login.css}" rel="stylesheet"  />
+    <link th:href="@{/css/login.css}" rel="stylesheet" />
     <title>로그인</title>
-
 </head>
 <body>
 <div class="header">
     <h1>로그인</h1>
 </div>
 <div class="login-container">
-    <form class="login-form" action="" method="post">
+    <form class="login-form" th:action="@{/login}" method="post" th:object="${memberInfo}">
         <label for="name">이름</label>
-        <input type="text" id="name" placeholder="이름" />
+        <input type="text" id="name" th:field="*{name}" placeholder="이름" required />
+
         <label for="password">비밀번호</label>
         <input
                 type="password"
                 id="password"
+                th:field="*{password}"
                 placeholder="비밀번호"
                 style="margin-bottom: 0px"
+                required
         />
+
+        <div th:if="${error}" style="color: red; margin-top: 10px;">
+            <p th:text="${error}"></p>
+        </div>
+
         <button type="submit">로그인</button>
     </form>
 </div>
