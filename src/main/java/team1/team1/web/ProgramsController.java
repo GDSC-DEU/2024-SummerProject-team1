@@ -42,8 +42,9 @@ public class ProgramsController {
         return "eduwrite";
     }
 
-    @GetMapping("/programs/{type}/{programId}")
-    public String workPage(Model model) {
+    @GetMapping("/view/{programId}")
+    public String workPage(@PathVariable int programId, Model model) {
+        model.addAttribute("program",programsService.findById(programId));
         return "view";
     }
 }

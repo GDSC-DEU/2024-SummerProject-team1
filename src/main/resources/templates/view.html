@@ -30,16 +30,25 @@
             <!-- 일자리 목록 항목들 -->
             <div class="view-item">
                 <div class="justify-content-between">
-                    <h5 class="mb-1" th:text="${job.title}">앱 UI 테스터 모집</h5>
+                    <h5 class="mb-1" th:text="${program.title}"></h5> <!-- 프로그램 제목 -->
                 </div>
-                <p class="mb-1" th:text="${job.host}">BNK 금융그룹</p>
-                <small th:text="${job.date}">2024년 7월 20일까지</small>
+                <p class="mb-1" th:text="${program.host}"></p> <!-- 프로그램 주최자 -->
+                <small th:text="${program.date}"></small> <!-- 프로그램 날짜 -->
             </div>
 
             <div class="view-content">
-                <p class="view-content-text" th:text="${job.content}">안녕하세요</p>
+                <p class="view-content-text" th:text="${program.content}"></p> <!-- 프로그램 내용 -->
             </div>
-            <button type="button" id="writebtn" class="btn btn-outline-info" onclick="getMoving()">신청하기</button>
+
+            <form action="/apply" method="post"> <!-- 신청하는 사이트로 데이터를 전송하는 form -->
+                <!-- 숨겨진 필드에 필요한 데이터를 담아 전송 -->
+                <input type="hidden" name="programId" th:value="${program.id}" />
+                <input type="hidden" name="title" th:value="${program.title}" />
+                <input type="hidden" name="host" th:value="${program.host}" />
+                <input type="hidden" name="date" th:value="${program.date}" />
+
+                <button type="submit" id="writebtn" class="btn btn-outline-info">신청하기</button>
+            </form>
         </div>
     </div>
 </div>
