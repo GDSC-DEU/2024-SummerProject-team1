@@ -15,16 +15,16 @@ public class MembersController {
 
     @GetMapping("/login")
     public String loginPage(Model model) {
-        model.addAttribute("loginRequest", new MemberInfo());
+        model.addAttribute("memberInfo", new MemberInfo());
         return "login";
     }
 
     @PostMapping("/login")
-    public String submitLoginPage(@ModelAttribute("loginRequest") MemberInfo loginRequest, Model model) {
+    public String submitLoginPage(@ModelAttribute("memberInfo") MemberInfo loginRequest, Model model) {
         MemberInfo memberInfo = memberInfoRepository.findByName(loginRequest.getName());
 
         if (memberInfo != null && memberInfo.getPassword().equals(loginRequest.getPassword())) {
-            return "redirect:/home";
+            return "index_logined";
         } else {
             model.addAttribute("error", "잘못된 이름 또는 비밀번호입니다.");
             return "login";
