@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import team1.team1.domain.programs.Programs;
 
+import java.util.Optional;
+
 @RequiredArgsConstructor
 @Getter
 public class ProgramsResponseDto {
@@ -20,4 +22,6 @@ public class ProgramsResponseDto {
         this.host = programs.getHost();
         this.endDate = programs.getEndDate();
     }
+
+
 }

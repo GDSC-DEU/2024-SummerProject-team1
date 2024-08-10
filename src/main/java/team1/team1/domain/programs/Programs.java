@@ -35,12 +35,12 @@ public class Programs {
     private List<Integer> appllicantIdArray;
 
     @Builder
-    public Programs(String type, String title, String host, String endDate)
+    public Programs(String type, String title, String host, String endDate, String content)
     {
         this.type = type;
         this.title = title;
         this.host = host;
         this.endDate = endDate;
+        this.content = content;
     }
-
 }

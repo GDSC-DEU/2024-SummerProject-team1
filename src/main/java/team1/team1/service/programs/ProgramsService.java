@@ -29,4 +29,22 @@ public class ProgramsService {
                 .map(programs -> new ProgramsResponseDto(programs))
                 .collect(Collectors.toList());
     }
+    @Transactional
+    public List<ProgramsResponseDto> getEnrolledProgramsResponseDto(List<Integer> enrolledProgramsIdList) {
+        return enrolledProgramsIdList.stream().map(id -> new ProgramsResponseDto(programsRepository.findById(id).get())).collect(Collectors.toList());
+    }
+    public ProgramsViewDto findById(int programId) {
+        Optional<Programs> programsData = programsRepository.findById(programId);
+
+        try {
+            if (programsData.isEmpty())
+            {
+                throw new Exception();
+            }
+        }
+        catch(Exception e) {
+
+        }
+        return new ProgramsViewDto(programsData.get());
+    }
 }
