@@ -35,8 +35,8 @@
                 <!-- 일자리 목록 항목들 -->
                 <div class="job-item">
                     <input type="text" th:field="*{title}" placeholder="일자리 이름">
-                    <input type="text" th:field="*{place}" placeholder="일자리 장소">
-                    <input type="datetime-local" th:field="*{date}">
+                    <input type="text" th:field="*{host}" placeholder="일자리 주최자">
+                    <input type="datetime-local" th:field="*{endDate}">
                 </div>
                 <div class="job-content">
                     <textarea th:field="*{content}" placeholder="내용을 입력해주세요!"></textarea>
