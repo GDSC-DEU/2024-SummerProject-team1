@@ -5,6 +5,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import team1.team1.domain.programs.Programs;
 import team1.team1.domain.programs.ProgramsRepository;
+import team1.team1.web.dto.MembersRequestDto;
+import team1.team1.web.dto.ProgramsRequestDto;
 import team1.team1.web.dto.ProgramsResponseDto;
 import team1.team1.web.dto.ProgramsViewDto;
 
@@ -46,5 +48,10 @@ public class ProgramsService {
 
         }
         return new ProgramsViewDto(programsData.get());
+    }
+
+    @Transactional
+    public int save(ProgramsRequestDto requestDto) {
+        return programsRepository.save(requestDto.toEntity()).getId();
     }
 }

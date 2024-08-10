@@ -30,7 +30,7 @@
         <div class="title-container">
             <h2 class="page-title">일자리 생성페이지</h2>
         </div>
-        <form th:action="@{/createJob}" method="post" th:object="${job}">
+        <form th:action="@{/work_write}" method="post" th:object="${job}">
             <div class="job-list-container">
                 <!-- 일자리 목록 항목들 -->
                 <div class="job-item">
@@ -61,7 +61,7 @@
             lottieContainer.style.display = 'block';
 
             setTimeout(function() {
-                window.location.href = '/worklist';
+                window.location.href = '/work_list';
             }, 3000); // 3000ms = 3초
         });
     });

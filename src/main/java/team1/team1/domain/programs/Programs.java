@@ -43,4 +43,7 @@ public class Programs {
         this.endDate = endDate;
         this.content = content;
     }
+
+    public void setType(String job) {
+    }
 }

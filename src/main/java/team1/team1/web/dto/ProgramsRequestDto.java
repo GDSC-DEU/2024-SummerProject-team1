@@ -1,10 +1,13 @@
 package team1.team1.web.dto;
 
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import team1.team1.domain.members.Members;
 import team1.team1.domain.programs.Programs;
-
+@Getter
+@Setter
 @NoArgsConstructor
 public class ProgramsRequestDto {
     private String type;

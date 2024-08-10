@@ -2,12 +2,14 @@ package team1.team1.web.dto;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 import team1.team1.domain.programs.Programs;
 
 import java.util.Optional;
 
 @RequiredArgsConstructor
 @Getter
+@Setter
 public class ProgramsResponseDto {
     private int id;
     private final String type;
