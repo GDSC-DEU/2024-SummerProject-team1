@@ -25,7 +25,7 @@
     <div id="jobList" class="content">
         <div class="title-container work-title">
             <h2 class="page-title">일자리 목록</h2>
-            <a th:href="@{/workwrite}">+</a>
+            <a th:href="@{/work_write}">+</a>
         </div>
         <div th:each="job : ${jobs}" class="job-list-container">
             <!-- 일자리 목록 항목들 -->
@@ -33,7 +33,7 @@
                 <a th:href="@{|/view/${job.id}|}" class="list-group-item list-group-item-action active" aria-current="true">
                     <p class="program-title" th:text="${job.title}"></p>
                     <p class="program-host" th:text="${job.host}"></p>
-                    <p class="program-end-date" th:text="${job.endDate}"></p>
+                    <p class="program-end-date" th:text="${job.endDate + '까지'}"></p>
                 </a>
             </div>
             <!-- 추가적인 일자리 항목들 -->
